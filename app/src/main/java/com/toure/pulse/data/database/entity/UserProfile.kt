@@ -1,4 +1,4 @@
-package com.toure.pulse.model
+package com.toure.pulse.data.database.entity
 
 data class UserProfile(
     val userId: String,

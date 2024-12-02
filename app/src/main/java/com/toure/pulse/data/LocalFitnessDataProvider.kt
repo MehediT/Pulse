@@ -1,18 +1,53 @@
 package com.toure.pulse.data
 
 import com.toure.pulse.R
-import com.toure.pulse.model.*
+import com.toure.pulse.domain.model.Exercise
+import com.toure.pulse.domain.model.FitnessGoal
+import com.toure.pulse.domain.model.NutritionEntry
+import com.toure.pulse.domain.model.ProgressMetric
+import com.toure.pulse.domain.model.TargetMuscle
+import com.toure.pulse.domain.model.User
+import com.toure.pulse.domain.model.UserProfile
+import com.toure.pulse.domain.model.Workout
+import com.toure.pulse.domain.model.WorkoutPlan
+import com.toure.pulse.domain.model.WorkoutSession
 
 object LocalFitnessDataProvider {
 
-    val sampleUser = UserProfile(
-        userId = "u001",
-        name = "Alice Johnson",
-        age = 28,
-        gender = "Female",
-        heightCm = 165.0,
-        weightKg = 60.0,
-        activityLevel = "Moderately Active"
+    val sampleUsers = listOf(
+        User(
+            userId = 1,
+            email = "alice.johnson@gmail.com",
+            login = "johnsonA",
+            password = "1234567890",
+        ),
+        User(
+            userId = 2,
+            email = "sample@gmail.com",
+            login = "sample",
+            password = "sample_pwd"
+        ),
+    )
+
+    val sampleUserProfiles = listOf(
+        UserProfile(
+            userId = "u001",
+            name = "Alice Johnson",
+            age = 28,
+            gender = "Female",
+            heightCm = 165.0,
+            weightKg = 60.0,
+            activityLevel = "Never Active"
+        ),
+        UserProfile(
+            userId = "u002",
+            name = "Sample Toure",
+            age = 22,
+            gender = "Male",
+            heightCm = 175.0,
+            weightKg = 60.0,
+            activityLevel = "Moderately Active"
+        )
     )
 
     val targetMuscles = listOf(
@@ -87,7 +122,6 @@ object LocalFitnessDataProvider {
             muscleImageId = R.drawable.calves_muscle // Replace with actual drawable resource ID
         )
     )
-
 
     val sampleExercises = listOf(
         Exercise(

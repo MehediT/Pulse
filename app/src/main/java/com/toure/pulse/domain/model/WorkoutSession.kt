@@ -1,4 +1,4 @@
-package com.toure.pulse.model
+package com.toure.pulse.domain.model
 
 data class WorkoutSession(
     val sessionId: String,
