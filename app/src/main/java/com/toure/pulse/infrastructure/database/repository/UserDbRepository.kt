@@ -10,9 +10,9 @@ import kotlinx.coroutines.flow.map
 class UserDbRepository(
     private val userDao: UserDao
 ) : UserRepository {
-    override fun getUsers(): Flow<List<UserModel>> = userDao.getUsers().map {it.map(::convertToModel) }
+    override fun getUsers(): Flow<List<UserModel>> = userDao.getUsers().map { userEntities -> userEntities.map{ it.convertToModel()} }
 
-    override fun getUserByEmail(email: String): Flow<List<UserModel>> = userDao.getUserByEmail(email).map {it.map(::convertToModel) }
+    override fun getUserByEmail(email: String): Flow<List<UserModel>> = userDao.getUserByEmail(email).map { userEntities -> userEntities.map{ it.convertToModel()} }
 
     override suspend fun insertUser(user: UserModel) =userDao.insertUser(user.convertToEntity())
 
@@ -31,4 +31,3 @@ class UserDbRepository(
 
 fun UserModel.convertToEntity() = UserEntity(userId, login,email,password,loggedIn)
 fun UserEntity.convertToModel() = UserModel(userId, login,email,password,loggedIn)
-fun convertToModel(it: UserEntity) = it.convertToModel()

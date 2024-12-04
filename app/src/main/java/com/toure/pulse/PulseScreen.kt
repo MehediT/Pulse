@@ -70,7 +70,7 @@ fun PulseApp(
             }
         }
     ) { innerPadding ->
-        PulseHomeContent(Modifier.padding(16.dp),innerPadding)
+        PulseHomeContent(Modifier.padding(innerPadding))
     }
 }
 
