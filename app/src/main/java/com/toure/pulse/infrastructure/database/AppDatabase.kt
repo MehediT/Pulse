@@ -1,11 +1,11 @@
-package com.toure.pulse.data.database
+package com.toure.pulse.infrastructure.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.toure.pulse.data.database.dao.UserDao
-import com.toure.pulse.data.database.entity.UserEntity
+import com.toure.pulse.infrastructure.database.dao.UserDao
+import com.toure.pulse.infrastructure.database.entity.UserEntity
 
 @Database(entities = [UserEntity::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {

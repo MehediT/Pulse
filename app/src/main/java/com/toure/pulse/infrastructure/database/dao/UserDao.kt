@@ -1,4 +1,4 @@
-package com.toure.pulse.data.database.dao
+package com.toure.pulse.infrastructure.database.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.toure.pulse.data.database.entity.UserEntity
+import com.toure.pulse.infrastructure.database.entity.UserEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

@@ -1,4 +1,4 @@
-package com.toure.pulse.data
+package com.toure.pulse.infrastructure
 //
 //import com.toure.pulse.R
 //import com.toure.pulse.domain.model.Exercise

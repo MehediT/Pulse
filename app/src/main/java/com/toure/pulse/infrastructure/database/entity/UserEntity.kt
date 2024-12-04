@@ -1,4 +1,4 @@
-package com.toure.pulse.data.database.entity
+package com.toure.pulse.infrastructure.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

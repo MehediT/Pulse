@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation("androidx.compose.material3:material3-window-size-class")
+    implementation(libs.androidx.material3.window.size)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -57,6 +57,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.constraintlayout)
     ksp(libs.androidx.room.compiler)
 
     // Retrofit
